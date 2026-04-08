@@ -15,7 +15,7 @@
 
     .resume {
       width: 800px;
-      height: 1100px; /* 像海報尺寸 */
+      height: 1100px;
       margin: 30px auto;
       background: white;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -37,15 +37,6 @@
       border-radius: 50%;
       margin-bottom: 15px;
       border: 3px solid white;
-    }
-
-    .left h2 {
-      margin: 10px 0 5px;
-    }
-
-    .left p {
-      font-size: 14px;
-      opacity: 0.85;
     }
 
     .right {
@@ -95,17 +86,30 @@
     .btn:hover {
       opacity: 0.85;
     }
+
+    /* 音樂播放器固定在右下角（比較好看） */
+    .music {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
   </style>
 </head>
 <body>
+
+<!-- 音樂（已修好） -->
+<div class="music">
+  <audio controls autoplay muted>
+    <source src="mp3/bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
 <div class="resume">
 
   <!-- 左側 -->
   <div class="left">
-    <!-- 重點：照片放 images 資料夾 -->
     <img src="images/photo.jpg" alt="個人照片">
-
     <h2>劉紜熏</h2>
     <p>學號：114018091</p>
     <p>email@example.com</p>
